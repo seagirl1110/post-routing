@@ -1,8 +1,9 @@
 import './App.css';
-import { Routes, Route, Link, NavLink } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import HomePage from './components/homePage';
 import ArticlesPage from './components/articlesPage';
 import ArticlePage from './components/articlePage';
+import NavComponent from './components/navComponent';
 
 const articles = [
   {
@@ -35,10 +36,7 @@ const articles = [
 function App() {
   return (
     <div className="App">
-      <nav>
-        <Link to="/">Главная</Link>
-        <Link to="/articles">Статьи</Link>
-      </nav>
+      <NavComponent />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route
