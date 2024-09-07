@@ -5,6 +5,12 @@
 }
 
 .App {
+
+    background-color: rgb(246, 244, 242);
+    height: 100vh;
+}
+
+.center_container {
     max-width: 1440px;
     padding: 10px 30px;
     margin: 0 auto;

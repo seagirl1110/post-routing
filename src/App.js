@@ -36,18 +36,20 @@ const articles = [
 function App() {
   return (
     <div className="App">
-      <NavComponent />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route
-          path="/articles"
-          element={<ArticlesPage articles={articles} />}
-        />
-        <Route
-          path="/articles/:id"
-          element={<ArticlePage articles={articles} />}
-        />
-      </Routes>
+      <div className="center_container">
+        <NavComponent />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route
+            path="/articles"
+            element={<ArticlesPage articles={articles} />}
+          />
+          <Route
+            path="/articles/:id"
+            element={<ArticlePage articles={articles} />}
+          />
+        </Routes>
+      </div>
     </div>
   );
 }
