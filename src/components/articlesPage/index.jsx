@@ -1,12 +1,17 @@
-const articles = [1, 2, 3, 4, 5];
+import { useLocation, useNavigate } from 'react-router-dom';
 
-function ArticlesPage() {
+function ArticlesPage({ articles }) {
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+
   return (
     <div>
       <h2>Список статей</h2>
       <ul>
         {articles.map((article, index) => (
-          <li key={index}>Статья {article}</li>
+          <li onClick={() => navigate(`${pathname}/${index + 1}`)} key={index}>
+            Статья {article.id}: {article.title}
+          </li>
         ))}
       </ul>
     </div>
