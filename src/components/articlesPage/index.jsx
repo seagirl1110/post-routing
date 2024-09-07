@@ -1,3 +1,5 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import { useLocation, useNavigate } from 'react-router-dom';
 import styles from './styles.module.css';
 
@@ -22,5 +24,9 @@ function ArticlesPage({ articles }) {
     </div>
   );
 }
+
+ArticlesPage.propTypes = {
+  articles: PropTypes.array,
+};
 
 export default ArticlesPage;
